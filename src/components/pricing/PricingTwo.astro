@@ -1,0 +1,355 @@
+<section class="relative overflow-hidden">
+  <div
+    class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24"
+    x-data="{duration: 'monthly'}"
+  >
+    <div class="max-w-2xl mx-auto text-center">
+      <span class="text-xs font-bold tracking-wide uppercase text-purple-500"
+        >Pricing</span
+      ><p
+        class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-purple-900"
+      >
+        Equip your business
+        <span class="md:block md:text-gray-500">
+          with world class software</span
+        >
+      </p><p class="max-w-xl mx-auto mt-4 text-base text-gray-500">
+        Every plan includes every feature, and can scale as your team does.
+      </p>
+      <div
+        class="w-full border bg-white overflow-hidden inline-flex mt-6 p-0.5 rounded-lg max-w-xs shadow-sm z-0"
+      >
+        <button
+          id="monthly-pricing-button"
+          class="block w-full px-8 py-2 text-xs font-medium transition border border-transparent rounded-md text-purple-900 bg-gray-100"
+          @click="duration = 'monthly'"
+          :class="duration == 'monthly' ? 'bg-gray-100 border text-purple-900 ' : ''"
+          type="button">Monthly</button
+        ><button
+          id="annual-pricing-button"
+          class="block w-full px-8 py-2 text-xs font-medium transition border border-transparent rounded-md text-purple-900"
+          @click="duration = 'annual'"
+          :class="duration == 'annual' ? 'bg-gray-100 border text-purple-900 ' : ''"
+          type="button">Annual</button
+        >
+      </div>
+    </div><div class="grid grid-cols-1 gap-4 md:grid-cols-2 mt-12 lkg:mt-24">
+      <div>
+        <div
+          class="grid items-center justify-center w-full grid-cols-1 p-8 rounded-t-3xl"
+        >
+          <div class="flex-shrink-0 block">
+            <div class="flex items-center">
+              <div>
+                <img
+                  class="inline-block w-12 h-12 rounded-full"
+                  src="/assets/hobby.svg"
+                  alt=""
+                />
+              </div><div class="ml-3">
+                <p class="text-xs font-medium text-gray-500">
+                  For individuals
+                </p><p class="text-base font-medium text-purple-900">Hobby</p>
+              </div>
+            </div>
+          </div><div class="mt-6">
+            <p class="text-sm text-gray-500">
+              This plan is ideal for individual users and hobbyists who are
+              looking for essential functionalities to support projects.
+            </p><p
+              class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-purple-900"
+            >
+              <span
+                data-monthly="$99.00"
+                data-annual="$49.00"
+                x-text="$el.dataset[duration]">$99.00</span
+              >
+              <span class="text-xs font-normal tracking-normal text-gray-500">
+                per month
+                <span x-show="duration === 'annual'" style="display: none;"
+                  >billed annually</span
+                ></span
+              >
+            </p>
+          </div>
+        </div><div class="p-8 overflow-hidden bg-white rounded-3xl shadow-sm">
+          <ul
+            class="flex flex-col order-last text-sm text-gray-500 gap-y-3"
+            role="list"
+          >
+            <li class="flex flex-row items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 icon icon-tabler icon-tabler-circle-check-filled"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              ><span>Limited number of users</span>
+            </li><li class="flex flex-row items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 icon icon-tabler icon-tabler-circle-check-filled"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              ><span>Limited storage (5 GB)</span>
+            </li><li class="flex flex-row items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 icon icon-tabler icon-tabler-circle-check-filled"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              ><span>Basic support (email only)</span>
+            </li><li class="flex flex-row items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 icon icon-tabler icon-tabler-circle-check-filled"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              ><span>Basic analytics</span>
+            </li><li class="flex flex-row items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 icon icon-tabler icon-tabler-circle-check-filled"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              ><span>Multiple integrations</span>
+            </li><li class="flex flex-row items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 icon icon-tabler icon-tabler-circle-check-filled"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              ><span>Basic customization</span>
+            </li><li class="flex flex-row items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 icon icon-tabler icon-tabler-circle-check-filled"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              ><span>No SLA</span>
+            </li>
+          </ul><div class="w-full mt-8">
+            <a
+              class="flex items-center justify-center h-10 px-4 py-2 text-sm font-semibold transition-all bg-white border border-gray-300 rounded-lg text-purple-600 hover:text-purple-500"
+              href="#">Get started</a
+            >
+          </div>
+        </div>
+      </div><div class="order-first lg:order-none">
+        <div
+          class="grid items-center justify-center w-full grid-cols-1 p-8 rounded-t-3xl"
+        >
+          <div class="flex-shrink-0 block">
+            <div class="flex items-center">
+              <div>
+                <img
+                  class="inline-block w-12 h-12 rounded-full"
+                  src="/assets/pro.svg"
+                  alt=""
+                />
+              </div><div class="ml-3">
+                <p class="text-xs font-medium text-gray-500">For startups</p><p
+                  class="text-base font-medium text-purple-900"
+                >
+                  Pro
+                </p>
+              </div>
+            </div>
+          </div><div class="mt-6">
+            <p class="text-sm text-gray-500">
+              If you're a small business or a startup, this plan is designed to
+              cater to your needs. It offers a balance of essential features.
+            </p><p
+              class="mt-8 text-4xl font-semibold tracking-tight lg:text-5xl text-purple-900"
+            >
+              <span
+                data-monthly="$199.00"
+                data-annual="$99.00"
+                x-text="$el.dataset[duration]">$199.00</span
+              ><span class="text-xs font-normal tracking-normal text-gray-500">
+                per month <span
+                  x-show="duration === 'annual'"
+                  style="display: none;">billed annually</span
+                ></span
+              >
+            </p>
+          </div>
+        </div><div
+          class="p-8 bg-gradient-to-t shadow-sm from-purple-800 via-purple-700 to-purple-500 rounded-3xl"
+        >
+          <ul
+            class="flex flex-col order-last text-sm text-white gap-y-3"
+            role="list"
+          >
+            <li class="flex flex-row items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 icon icon-tabler icon-tabler-circle-check-filled"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              ><span>Unlimited number of users</span>
+            </li><li class="flex flex-row items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 icon icon-tabler icon-tabler-circle-check-filled"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              ><span>Unlimited storage</span>
+            </li><li class="flex flex-row items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 icon icon-tabler icon-tabler-circle-check-filled"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              ><span>Advanced support</span>
+            </li><li class="flex flex-row items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 icon icon-tabler icon-tabler-circle-check-filled"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              ><span>Advanced analytics</span>
+            </li><li class="flex flex-row items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 icon icon-tabler icon-tabler-circle-check-filled"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              ><span>Multiple integrations</span>
+            </li><li class="flex flex-row items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 icon icon-tabler icon-tabler-circle-check-filled"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              ><span>Advanced customization</span>
+            </li><li class="flex flex-row items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 icon icon-tabler icon-tabler-circle-check-filled"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                  stroke-width="0"
+                  fill="currentColor"></path></svg
+              ><span>99.9% SLA</span>
+            </li>
+          </ul><div class="w-full mt-8">
+            <a
+              class="text-sm flex font-semibold items-center justify-center px-4 py-2 rounded-lg transition-all h-10 text-white bg-gradient-to-b from-white/[.105] hover:to-white/[.25] ring-1 ring-inset ring-white/20 to-white/[.15]"
+              href="#">Get started</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

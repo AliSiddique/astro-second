@@ -4,15 +4,15 @@
 
 
 :root {
-  --astro-code-color-text: #000000;
-  --astro-code-color-background: #ffffff;
-  --astro-code-token-constant: #00000080;
-  --astro-code-token-string: #00000050;
-  --astro-code-token-comment: #00000060;
-  --astro-code-token-keyword: black;
+  --astro-code-color-text: #fff;
+  --astro-code-color-background: #161742;
+  --astro-code-token-constant: #fafafa;
+  --astro-code-token-string: cyan;
+  --astro-code-token-comment: #70779d;
+  --astro-code-token-keyword: #c1cffa;
   --astro-code-token-parameter: #ffffff;
-  --astro-code-token-function: black;
-  --astro-code-token-string-expression: #fe351b;
+  --astro-code-token-function: #6bdbb9;
+  --astro-code-token-string-expression: #4d68ed;
   --astro-code-token-punctuation: #ffffff;
   --astro-code-token-link: #ffffff;
 }
