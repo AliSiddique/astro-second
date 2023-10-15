@@ -5,6 +5,30 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      animation: {
+        marqueeLeft: 'marqueeLeft 20s linear infinite',
+        marqueeRight: 'marqueeRight 20s linear infinite',
+
+      },
+      keyframes: {
+        marqueeLeft: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        marqueeRight: {
+          '0%': { transform: 'translateX(-100%)' }, // Change from 0% to 100%
+          '100%': { transform: 'translateX(-0%)' },  // Change from 100% to 0%
+        },
+
+        'fade-in': {
+          from: {
+            opacity: 0,
+          },
+          to: {
+            opacity: 1,
+          },
+        },
+      },
       borderRadius: {
         "4xl": "2rem",
         "5xl": "3rem",
@@ -12,7 +36,7 @@ module.exports = {
       },
       boxShadow: {
         // The shadow has no color
-        // This way you can use the color you want to
+        // This way you can use the color you want
         button: "0px 1px 2px, 0px 0px 0px 1px inset, 0px 0px 0px 1px inset;",
         box: "0px 1px 8px,  0px -1px 1px inset;",
       },
@@ -22,7 +46,17 @@ module.exports = {
       },
       colors: {
         indigo: {
-         
+          '50': 'hsl(245, 100%, 97%)',
+          '100': 'hsl(240, 100%, 95%)',
+          '200': 'hsl(241, 100%, 92%)',
+          '300': 'hsl(242, 100%, 85%)',
+          '400': 'hsl(244, 100%, 76%)',
+          '500': 'hsl(248, 98%, 66%)',
+          '600': 'hsl(252, 91%, 57%)',
+          '700': 'hsl(253, 76%, 50%)',
+          '800': 'hsl(253, 76%, 42%)',
+          '900': 'hsl(254, 74%, 35%)',
+          '950': 'hsl(251, 79%, 23%)',
       },
         blue: {
           '50': 'hsl(225, 100%, 97%)',
@@ -58,5 +92,6 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
+    require('tailwind-scrollbar-hide')
   ],
 }
