@@ -2,12 +2,34 @@
   class="justify-center w-full mx-auto bg-gray-100/30 backdrop-blur-3xl border-b text-blue-950 text-xs font-semibold"
 >
   <div
-    class="flex h-12 items-center justify-center bg-gradient-to-t from-blue-500 to-indigo-600 text-white"
+    x-cloak
+    x-show="showAlert"
+    x-data="{ showAlert: true }"
+    role="alert"
+    class="flex h-12 items-center justify-center bg-gradient-to-t from-blue-500 to-indigo-600 text-white "
   >
-    <div class="flex items-center justify-center gap-4">
+    <div class="flex items-center justify-between gap-4 w-full px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-screen-xl">
       <div class="text-xs font-medium">
-        <span>This is a banner to anounce features</span>
+        This is a dismissible banner to anounce features
       </div>
+      <button  @click="showAlert = false" class="underline bg-white/10 ring-1 ring-white/50 text-white focus:bg-white focus:text-blue-700 hover:bg-white hover:text-blue-950 rounded-full p-0.5"
+        >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-x w-4 h-4"
+
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M18 6l-12 12"></path>
+          <path d="M6 6l12 12"></path>
+        </svg></button
+      >
     </div>
   </div>
   <div
@@ -16,11 +38,10 @@
   >
     <div class="flex flex-row items-center justify-between">
       <a
-        class="inline-flex font-mono uppercase items-center gap-2 text-base font-bold "
+        class="inline-flex font-mono uppercase items-center gap-2 text-base font-bold"
         href="/"
       >
-        <span
-          >
+        <span>
           <svg
             class="h-4"
             viewBox="0 0 400 403"
@@ -146,7 +167,7 @@
         href="/system/style-guide"
         >Style Guide
       </a><a
-        class="rounded-full px-4 border py-2 text-xs font-semibold transition-all flex items-center justify-center bg-white text-gray-500 hover:text-accent-500 h-8 border-gray-300 focus:ring-2 shadow-button shadow-white/20 focus:ring-blue-950 focus:ring-offset-2 duration-200 ring-offset-gray-200 hover:shadow-none"
+        class="flex items-center justify-center h-8 px-4 py-2  font-semibold text-white transition-all duration-200 rounded-full bg-gradient-to-b from-blue-500 to-indigo-600 hover:to-indigo-700 shadow-button shadow-blue-600/50 focus:ring-2 focus:ring-blue-950 focus:ring-offset-2 ring-offset-gray-200 hover:shadow-none"
         href="#_"
         role="button"><span>Buy Seabreeze</span></a
       >

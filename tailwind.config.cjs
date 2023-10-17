@@ -6,18 +6,22 @@ module.exports = {
   theme: {
     extend: {
       animation: {
+
         marqueeLeft: 'marqueeLeft 20s linear infinite',
         marqueeRight: 'marqueeRight 20s linear infinite',
+        marqueePaused: 'paused' //stops on hover
+
 
       },
       keyframes: {
+
         marqueeLeft: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-100%)' },
         },
         marqueeRight: {
-          '0%': { transform: 'translateX(-100%)' }, // Change from 0% to 100%
-          '100%': { transform: 'translateX(-0%)' },  // Change from 100% to 0%
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(-0%)' },
         },
 
         'fade-in': {
@@ -40,6 +44,13 @@ module.exports = {
         button: "0px 1px 2px, 0px 0px 0px 1px inset, 0px 0px 0px 1px inset;",
         box: "0px 1px 8px,  0px -1px 1px inset;",
       },
+      dropShadow: {
+        // The shadow has no color
+        // This way you can use the color you want
+
+        box: "0px 1px 8px,  0px -1px 1px inset;",
+      },
+
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
         mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],

@@ -4,16 +4,29 @@
 
 
 :root {
-  --astro-code-color-text: #fff;
-  --astro-code-color-background: #161742;
-  --astro-code-token-constant: #fafafa;
-  --astro-code-token-string: cyan;
+  --astro-code-color-text: #000067;
+  --astro-code-color-background: #fff;
+  --astro-code-token-constant: #4e6bef;
+  --astro-code-token-string: ##0B9395;
   --astro-code-token-comment: #70779d;
   --astro-code-token-keyword: #c1cffa;
   --astro-code-token-parameter: #ffffff;
-  --astro-code-token-function: #6bdbb9;
-  --astro-code-token-string-expression: #4d68ed;
+  --astro-code-token-function: #0092FC;
+  --astro-code-token-string-expression: #5871CD;
   --astro-code-token-punctuation: #ffffff;
   --astro-code-token-link: #ffffff;
 }
 
+/* Transition on the summary tag by faking the bottom maring*/
+details summary {
+  cursor: pointer;
+  transition: margin 150ms ease-out !important;
+}
+details[open] summary {
+  margin-bottom: 10px;
+}
+
+
+.prose-styles {
+  @apply prose  max-w-none prose-headings:font-mono prose-headings:uppercase  prose-li:marker:text-blue-700 prose-pre:shadow-box prose-pre:shadow-gray-500/20 prose-pre:rounded-2xl     prose-headings:font-semibold prose-headings:text-blue-950 prose-h1:text-2xl prose-headings:tracking-tighter text-sm prose-p:text-gray-700 prose-pre:bg-blue-900 prose-img:rounded-md;
+}

@@ -39,23 +39,42 @@ import { AstroSeo } from "@astrolib/seo";
   }}
 />
 <BaseLayout>
-  <div
-    class="mx-auto hover:prose-a:text-black prose prose-a:text-accent-500 prose-blockquote:border-l-black prose-blockquote:text-gray-500 prose-code:text-black prose-headings:font-bold prose-headings:text-black prose-headings:tracking-tighter prose-li:marker:text-accent-500 text-gray-500 py-24 prose-pre:border">
-    <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-
-    <p>{frontmatter.title}</p>
-    <p><em>{frontmatter.description}</em></p>
-    <p>Written by: {frontmatter.author}</p>
-    <div class="flex flex-wrap gap-3 mt-12">
-      {
-        frontmatter.tags.map((tag) => (
-          <span class="inline-flex items-center text-sm font-light text-black dark:text-white  underline hover:text-accent-300">
-            <a href={`/tags/${tag}`}>{tag}</a>
-          </span>
-        ))
-      }
+  <section>
+    <div class="max-w-screen-xl px-8 py-24 mx-auto md:px-12 lg:px-32">
+      <img
+        class="h-96 w-full object-cover rounded-3xl shadow-gray-500/20 shadow-box"
+        src={frontmatter.image.url}
+        alt={frontmatter.image.alt}
+      />
+      <div class="mt-8 max-w-xl mx-auto">
+        <span
+          class="font-mono text-xs font-medium tracking-tight text-blue-600 uppercase"
+        >
+          by {frontmatter.author} on {
+            frontmatter.pubDate.toString().slice(0, 10)
+          }
+        </span>
+        <h1
+          class="mt-8 text-4xl font-semibold tracking-tighter text-blue-950 uppercase font-mono "
+        >
+          {frontmatter.title}
+        </h1>
+        <p class="mt-2 text-sm text-gray-700"><em>{frontmatter.description}</em></p>
+        <div class="flex flex-wrap gap-3 mt-12">
+          {
+            frontmatter.tags.map((tag) => (
+              <span class="inline-flex items-center  underline font-mono text-xs font-medium tracking-tight text-blue-600 uppercase">
+                <a href={`/tags/${tag}`}>{tag}</a>
+              </span>
+            ))
+          }
+        </div>
+      </div>
+     <div class="max-w-xl mx-auto">
+        <div class="prose-styles">
+          <slot />
+        </div>
+     </div>
     </div>
-    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
-    <slot />
-  </div>
+  </section>
 </BaseLayout>
