@@ -9,7 +9,7 @@
   --astro-code-token-constant: #4e6bef;
   --astro-code-token-string: ##0B9395;
   --astro-code-token-comment: #70779d;
-  --astro-code-token-keyword: #c1cffa;
+  --astro-code-token-keyword: #7E83B3;
   --astro-code-token-parameter: #ffffff;
   --astro-code-token-function: #0092FC;
   --astro-code-token-string-expression: #5871CD;
@@ -28,5 +28,10 @@ details[open] summary {
 
 
 .prose-styles {
-  @apply prose  max-w-none prose-headings:font-mono prose-headings:uppercase  prose-li:marker:text-blue-700 prose-pre:shadow-box prose-pre:shadow-gray-500/20 prose-pre:rounded-2xl     prose-headings:font-semibold prose-headings:text-blue-950 prose-h1:text-2xl prose-headings:tracking-tighter text-sm prose-p:text-gray-700 prose-pre:bg-blue-900 prose-img:rounded-md;
+  @apply prose  max-w-none  prose-headings:uppercase  prose-li:marker:text-blue-700 prose-pre:shadow-box prose-pre:shadow-gray-500/20 prose-pre:rounded-2xl     prose-headings:font-semibold prose-headings:text-blue-950 prose-h1:text-2xl prose-headings:tracking-tighter text-sm prose-p:text-gray-700 prose-pre:bg-blue-900 prose-img:rounded-md prose-blockquote:border-blue-600;
 }
+
+
+
+
+

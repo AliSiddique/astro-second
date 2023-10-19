@@ -17,10 +17,10 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
         Blogs &amp; news
         </span>
         <h1
-          class="mt-8 text-4xl font-semibold tracking-tighter text-blue-950 md:text-5xl"
+          class="mt-8 text-4xl font-semibold tracking-tighter text-blue-950 "
         >
         Read our articles about<span
-            class="md:block  md:text-transparent md:bg-clip-text md:bg-gradient-to-r from-blue-500 to-indigo-600 py-2 "
+            class="md:block   "
             > fintech and  general tech</span
           >
         </h1>
@@ -51,10 +51,10 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 
       <div class="inline-flex items-center gap-4 mt-12">
         <p class="font-mono text-base font-medium tracking-tighter uppercase text-blue-950">Trending now:</p>
-        <ol role="list" class="flex flex-wrap gap-3 ">
+        <ol role="list" class="flex flex-wrap gap-1 ">
           {
             tags.map((tag) => (
-              <li class="inline-flex items-center  underline font-mono text-xs font-medium tracking-tight text-blue-600 uppercase ">
+              <li class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium text-gray-600 rounded-md bg-gray-50 ring-1 ring-inset ring-gray-500/10">
                 <a href={`/tags/${tag}`}>{tag}</a>
               </li>
             ))
@@ -62,7 +62,7 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
         </ol>
       </div>
       <ul
-        class="grid grid-cols-1 mt-12 lg:grid-cols-2 gap-12  ">
+        class="relative z-10 grid gap-px mt-12 overflow-hidden bg-gray-200 rounded-xl shadow-box shadow-gray-500/30 sm:grid-cols-2 xl:grid-cols-3">
         {
           allPosts
             .slice()
@@ -83,3 +83,7 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
     </div>
   </section>
 </BaseLayout>
+
+
+
+

@@ -6,15 +6,15 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-
         marqueeLeft: 'marqueeLeft 20s linear infinite',
         marqueeRight: 'marqueeRight 20s linear infinite',
-        marqueePaused: 'paused' //stops on hover
+        animationPaused: 'paused', //stops on hover
 
+          scrollerDown: 'scrollerDown 12s linear infinite',
+          scrollerUp: 'scrollerUp 12s linear infinite',
 
       },
       keyframes: {
-
         marqueeLeft: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-100%)' },
@@ -23,13 +23,25 @@ module.exports = {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(-0%)' },
         },
-
-        'fade-in': {
-          from: {
-            opacity: 0,
+        scrollerDown: {
+          '0%': {
+            transform: 'translateY(-10em)'
           },
+          '100%': {
+            transform: 'translateY(14em)'
+          },
+        },
+        scrollerUp: {
+          '0%': {
+            transform: 'translateY(10em)'
+          },
+          '100%': {
+            transform: 'translateY(-14em)'
+          },
+        },
+        'spin-reverse': {
           to: {
-            opacity: 1,
+            transform: 'rotate(-360deg)',
           },
         },
       },
@@ -47,10 +59,8 @@ module.exports = {
       dropShadow: {
         // The shadow has no color
         // This way you can use the color you want
-
         box: "0px 1px 8px,  0px -1px 1px inset;",
       },
-
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
         mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
